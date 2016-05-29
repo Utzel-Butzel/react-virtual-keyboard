@@ -22,7 +22,7 @@ export default class extends React.Component {
         });
     }
     handleFocus(event) {
-        console.log("focus");
+        console.log("focusdddd");
     }
     handleBlur(event) {
             console.log("blur");
@@ -38,6 +38,6 @@ export default class extends React.Component {
      else {
         element = ( <input ref="keyboard" className = { this.props.options.class } value = { this.state.value } onChange = { this.handleChange } /> );
      }
-        return ( <div>{ element }</div> );
+        return ( <div>ddssdadsasd { element }</div> );
     }
 }

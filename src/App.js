@@ -6,7 +6,7 @@ export default class App extends Component {
     return (
 	    <div>
 	      <h1>Hello, world.</h1>
-	      <Keyboard value='sdamasdmmsamsdsda' options={{type:'textarea', layout:'qwerty', color:'light', class:'sxcycx'}} />
+	      <Keyboard value='jbjhhj' options={{type:'textarea', layout:'qwerty', color:'light', class:'sxcycx'}} />
 	    </div>
     );
   }
