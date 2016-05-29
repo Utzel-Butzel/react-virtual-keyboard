@@ -1,0 +1,33 @@
+body {
+	background: rgba(#000,0.1);
+}
+
+.keyboard-wrapper {
+	.ui-keyboard-input-current {
+		position: absolute;
+		z-index: -1;
+	}
+}
+
+
+.ui-keyboard-keyset {
+	background: rgba(#000, 0.8);
+	text-align: center;
+}
+
+.ui-keyboard-button {
+	font-size: 1em;
+	margin: 0.2em;
+	border: none;
+	border-radius: 3px;
+	color: #FFF;
+	background: rgba(#FFF, 0.1);
+	padding: 0.7em 1.3em;
+	cursor: pointer;
+	&:hover {
+		background: rgba(#FFF, 0.4);
+	}
+}
+.ui-keyboard-space {
+	width: 30%;
+}
