@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Keyboard from "../../components/Keyboard";
+import Keyboard from "../../Keyboard";
 
 export default class App extends Component {
 	    constructor() {

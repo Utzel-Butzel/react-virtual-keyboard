@@ -2,6 +2,7 @@
   "name": "react-virtual-keyboard",
   "version": "1.0.0",
   "description": "Use jQuery Virtual Keyboard in react.js",
+  "main"  : "Keyboard.js",
   "scripts": {
     "start": "node server.js",
     "lint": "eslint src"
@@ -21,7 +22,7 @@
     "edit",
     "webpack"
   ],
-  "author": "Dan Abramov <dan.abramov@me.com> (http://github.com/gaearon)",
+  "author": "Robert Gühne <robert@polyxo.de> (http://github.com/Utzel-Butzel)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/gaearon/react-hot-boilerplate/issues"
