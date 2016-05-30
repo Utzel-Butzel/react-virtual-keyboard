@@ -53,9 +53,9 @@ export default class App extends Component {
     return (
 	    <div>
 	      <h1>Textarea. { this.state.textarea }</h1>
-	      <Keyboard value={ this.state.textarea } name='thetextareaname' options={{type:'textarea', layout:'qwerty', autoAccept: true, alwaysOpen: false, appendLocally: true, color:'light', class:'sxcycx'}} callbackParent={this.onTextareaChanged} />
+	      <Keyboard value={ this.state.textarea } name='thetextareaname' options={{type:'textarea', usePreview: false, layout:'qwerty', autoAccept: true, alwaysOpen: false, appendLocally: false, change: true, color:'light', class:'sxcycx'}} callbackParent={this.onTextareaChanged} />
 	      <h1>Input. { this.state.inputfield }</h1>
-	      <Keyboard value={ this.state.inputfield } name='thename' options={{type:'input', layout:'qwerty', autoAccept: true, alwaysOpen: false, color:'light', class:'sxcycx', layout: 'custom',display, customLayout}} callbackParent={this.onInputChanged} />
+	      <Keyboard value={ this.state.inputfield } name='thename' options={{usePreview: false, type:'input', layout:'qwerty', autoAccept: true, alwaysOpen: false, color:'light', class:'sxcycx', layout: 'custom',display, customLayout}} callbackParent={this.onInputChanged} />
 	      <footer>The Footer</footer>
 	    </div>
     );
