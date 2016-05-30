@@ -19,7 +19,11 @@ import Keyboard from 'Keyboard';
 
 #### Use Keyboard Element
 ```html
-<Keyboard value={ this.state.textarea } options={{type:'textarea', layout:'qwerty', autoAccept: true, alwaysOpen: false, appendLocally: true, color:'light', class:'sxcycx'}} callbackParent={this.onTextareaChanged} />
+<Keyboard 
+	value={ this.state.textarea }
+	name='thetextareaname'
+	options={{type:'textarea', layout:'qwerty', autoAccept: true, alwaysOpen: false, appendLocally: true, color:'light', class:'sxcycx', updateOnChange: true }}
+	callbackParent={this.onTextareaChanged} />
 ```
 You can use the following Options: https://github.com/Mottie/Keyboard/wiki/Options
 
@@ -27,8 +31,8 @@ You can use the following Options: https://github.com/Mottie/Keyboard/wiki/Optio
 #### Return updated values
 ```javascript
 onTextareaChanged(newState) {
-        this.setState({ textarea: newState });
-    }
+    this.setState({ textarea: newState });
+}
 ```
 
 ### Dependencies
