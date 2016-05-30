@@ -1,20 +1,3 @@
-body {
-	font-family: sans-serif;
-	background: rgba(#000,0.02);
-}
-
-.keyboard-wrapper {
-	.ui-keyboard-input-current {
-		//position: absolute;
-		z-index: -1;
-	}
-}
-
-textarea, input {
-	font-size: 2em;
-}
-
-
 .ui-keyboard-keyset {
 	background: rgba(#000, 0.8);
 	text-align: center;
