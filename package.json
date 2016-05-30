@@ -2,7 +2,7 @@
   "name": "react-virtual-keyboard",
   "version": "1.0.0",
   "description": "Use jQuery Virtual Keyboard in react.js",
-  "main"  : "Keyboard.js",
+  "main": "Keyboard.js",
   "scripts": {
     "start": "node server.js",
     "lint": "eslint src"
@@ -47,8 +47,9 @@
     "webpack-dev-server": "^1.12.1"
   },
   "dependencies": {
-    "react": "^0.14.6",
-    "react-dom": "^0.14.6",
+    "jquery": "^2.2.4",
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1",
     "virtual-keyboard": "^1.25.28"
   }
 }

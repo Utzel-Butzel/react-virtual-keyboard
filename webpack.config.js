@@ -15,10 +15,10 @@ module.exports = {
         publicPath: '/static/'
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin(),
-         new ExtractTextPlugin('style.css', {
+        new webpack.HotModuleReplacementPlugin()
+        /*, new ExtractTextPlugin('style.css', {
             allChunks: true
-        })
+        }) */
     ],
     module: {
         loaders: [{

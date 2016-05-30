@@ -1,6 +1,8 @@
 'use strict';
 import React from "react";
 import ReactDOM from 'react-dom';
+import jQuery from 'jquery';
+import keyboard from 'virtual-keyboard/dist/js/jquery.keyboard.js';
 
 export default class extends React.Component {
     constructor() {
@@ -9,12 +11,8 @@ export default class extends React.Component {
         this.handleChange = this.handleChange.bind(this);
     }
     componentDidMount() {
-        var jQuery = require('virtual-keyboard/node_modules/jquery/dist/jquery.js');
-        var keyboard = require('virtual-keyboard/dist/js/jquery.keyboard.js');
-        console.log("Component mounted");
         // Set Value to Input Element
         this.setState({ value: this.props.value });
-
         this.props.options.accepted = function(event, keyboard, el) {
             this.handleChange('', el.value);
             console.log('The content "' + el.value + '" was accepted');
