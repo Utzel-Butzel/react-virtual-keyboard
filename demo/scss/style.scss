@@ -1,6 +1,6 @@
 body {
 	font-family: sans-serif;
-	background: rgba(#000,0.1);
+	background: rgba(#000,0.02);
 }
 
 .keyboard-wrapper {
@@ -8,6 +8,10 @@ body {
 		position: absolute;
 		z-index: -1;
 	}
+}
+
+textarea, input {
+	font-size: 2em;
 }
 
 
