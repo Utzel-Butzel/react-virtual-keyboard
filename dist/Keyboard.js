@@ -94,6 +94,7 @@ var _class = function (_React$Component) {
     }, {
         key: 'handleChange',
         value: function handleChange(event, input) {
+            if (!input && event.target && event.target.value) input = event.target.value;
             console.log("change", input, event, this);
             this.setState({ value: input });
             this.props.onChange(input);
