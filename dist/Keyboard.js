@@ -92,6 +92,13 @@ var _class = function (_React$Component) {
             this.refs.keyboard.select();
         }
     }, {
+        key: 'blur',
+        value: function blur() {
+            var keyboard = (0, _jquery2.default)(_reactDom2.default.findDOMNode(this.refs.keyboard));
+            if (keyboard && typeof keyboard.getkeyboard == 'function' && typeof keyboard.getkeyboard().close == 'function') keyboard.getkeyboard().close();
+            this.refs.keyboard.blur();
+        }
+    }, {
         key: 'handleChange',
         value: function handleChange(event, input) {
             if (!input && event.target && event.target.value) input = event.target.value;
