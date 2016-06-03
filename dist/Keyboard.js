@@ -80,6 +80,13 @@ var _class = function (_React$Component) {
 
             //Add jQuery Keyboard to DOM Element
             (0, _jquery2.default)(_reactDom2.default.findDOMNode(this.refs.keyboard)).keyboard(this.props.options);
+
+            // Update while typing if usePreview is false
+            if (this.props.options.usePreview === false) {
+                (0, _jquery2.default)(_reactDom2.default.findDOMNode(this.refs.keyboard)).on('keyboardChange', function (event, keyboard, el) {
+                    this.handleChange(null, keyboard.preview.value);
+                }.bind(this));
+            }
         }
     }, {
         key: 'clear',
