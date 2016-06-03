@@ -56,6 +56,9 @@ var _class = function (_React$Component) {
 
             this.props.options.accepted = function (event, keyboard, el) {
                 this.handleChange('', el.value);
+                if (typeof this.props.onAccepted == 'function') {
+                    this.props.onAccepted(el.value);
+                }
                 console.log('The content "' + el.value + '" was accepted');
             }.bind(this);
 
