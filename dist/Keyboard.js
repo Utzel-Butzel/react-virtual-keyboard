@@ -109,6 +109,11 @@ var _class = function (_React$Component) {
             this.refs.keyboard.blur();
         }
     }, {
+        key: 'checkValidity',
+        value: function checkValidity() {
+            return this.refs.keyboard.checkValidity();
+        }
+    }, {
         key: 'handleChange',
         value: function handleChange(event, input) {
             if (!input && event.target && event.target.value) input = event.target.value;
@@ -122,9 +127,10 @@ var _class = function (_React$Component) {
             var _props = this.props;
             var options = _props.options;
             var value = _props.value;
+            var validation = _props.validation;
             var onChange = _props.onChange;
 
-            var other = _objectWithoutProperties(_props, ['options', 'value', 'onChange']);
+            var other = _objectWithoutProperties(_props, ['options', 'value', 'validation', 'onChange']);
 
             if (this.props.options.type == 'textarea') {
                 var element = _react2.default.createElement('textarea', _extends({ ref: 'keyboard', value: this.state.value, onChange: this.handleChange }, other));
