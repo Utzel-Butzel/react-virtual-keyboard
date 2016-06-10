@@ -7,6 +7,9 @@ export default class App extends Component {
         this.state = { textarea: "This is some sample textarea input", inputfield: "Input field" };
         this.onTextareaChanged = this.onTextareaChanged.bind(this);
         this.onInputChanged = this.onInputChanged.bind(this);
+        this.onEmailInputChanged = this.onEmailInputChanged.bind(this);
+
+        this.state = { emailValidator: false };
     }
     onTextareaChanged(newState) {
         this.setState({ textarea: newState });
@@ -14,6 +17,13 @@ export default class App extends Component {
     onInputChanged(newState) {
         this.setState({ inputfield: newState });
     }
+    onEmailInputChanged(input) {
+	    console.log("Email input:", input);
+	    if (this.refs.emailToInput.checkValidity())
+	      this.setState({emailValidator: false });
+	  	else
+	  	this.setState({emailValidator: true });
+	  }
   render() {
 
   	var display = {
@@ -56,7 +66,19 @@ export default class App extends Component {
 	      <Keyboard value={ this.state.textarea } name='thetextareaname' options={{type:'textarea', usePreview: false, layout:'qwerty', autoAccept: true, alwaysOpen: false, appendLocally: false, updateOnChange: true, color:'light'}} onChange={this.onTextareaChanged} />
 	      <h1>Input. { this.state.inputfield }</h1>
 	      <Keyboard value={ this.state.inputfield } name='thename' options={{usePreview: false, type:'input', layout:'qwerty', autoAccept: true, alwaysOpen: false, color:'light', layout: 'custom',display, customLayout}} onChange={this.onInputChanged} />
-	      <footer>The Footer</footer>
+	      <h1>E-Mail Input</h1>
+	      <p>The caret cursor position is not working correctly when using type='email', thats why we use type='text' and an email check pattern. <a href="https://github.com/Mottie/Keyboard/issues/241">http://github.com/Mottie/Keyboard/issues/241</a></p> 
+	        <Keyboard 
+              name="emailTo"
+              ref="emailToInput"
+              type="text"
+              required
+              pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+              placeholder="Ihre Emailadresse"
+              onChange={ this.onEmailInputChanged }
+              options={{ usePreview: false, stickyShift: false }}
+               />
+              <span className={ this.state.emailValidator ? "errormsg invalid" : "errormsg" }>Bitte geben Sie eine E-Mailadresse an</span>
 	    </div>
     );
   }

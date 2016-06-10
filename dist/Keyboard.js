@@ -131,9 +131,9 @@ var _class = function (_React$Component) {
             var other = _objectWithoutProperties(_props, ['options', 'value', 'validation', 'onChange']);
 
             if (this.props.options.type == 'textarea') {
-                var element = _react2.default.createElement('textarea', _extends({ ref: 'keyboard', value: this.state.value }, other));
+                var element = _react2.default.createElement('textarea', _extends({ ref: 'keyboard', value: this.state.value, onChange: this.handleChange }, other));
             } else {
-                var element = _react2.default.createElement('input', _extends({ ref: 'keyboard', value: this.state.value }, other));
+                var element = _react2.default.createElement('input', _extends({ ref: 'keyboard', value: this.state.value, onChange: this.handleChange }, other));
             }
             return _react2.default.createElement(
                 'div',
