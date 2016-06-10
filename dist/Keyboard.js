@@ -75,7 +75,7 @@ var _class = function (_React$Component) {
             if (this.props.options.updateOnChange == true) {
                 this.props.options.change = function (event, keyboard, el) {
                     this.handleChange('', keyboard.preview.value);
-                    console.log('The content "' + el.value + '" was changed', el, keyboard.preview.value);
+                    console.log('The content "' + el.value + '" was changed');
                 }.bind(this);
             }
 
@@ -115,7 +115,7 @@ var _class = function (_React$Component) {
         key: 'handleChange',
         value: function handleChange(event, input) {
             if (!input && event.target && event.target.value) input = event.target.value;
-            console.log("change", input, event, this);
+            console.log("Change", input);
             this.setState({ value: input });
             this.props.onChange(input);
         }
