@@ -114,7 +114,7 @@ var _class = function (_React$Component) {
     }, {
         key: 'handleChange',
         value: function handleChange(event, input) {
-            if (!input && event && event.target && event.target.value) input = event.target.value;
+            if (!input && event && event.target && typeof event.target.value != 'undefined') input = event.target.value;
             console.log("Change", input);
             this.setState({ value: input });
             this.props.onChange(input);
