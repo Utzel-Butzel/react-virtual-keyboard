@@ -64,12 +64,10 @@ var _class = function (_React$Component) {
 
             // Set Class to visible
             this.props.options.visible = function function_name(event, keyboard, el) {
-                console.log(keyboard);
                 this.setState({ className: 'keyboard-wrapper open' });
             }.bind(this);
 
             this.props.options.hidden = function function_name(event, keyboard, el) {
-                console.log(keyboard);
                 this.setState({ className: 'keyboard-wrapper' });
             }.bind(this);
 
