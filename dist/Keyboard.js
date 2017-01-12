@@ -37,12 +37,12 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var _class = function (_React$Component) {
     _inherits(_class, _React$Component);
 
-    function _class() {
+    function _class(props) {
         _classCallCheck(this, _class);
 
-        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(_class).call(this));
+        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(_class).call(this, props));
 
-        _this.state = { value: "" };
+        _this.state = { value: "", className: 'keyboard-wrapper' };
         _this.handleChange = _this.handleChange.bind(_this);
         return _this;
     }
@@ -52,7 +52,6 @@ var _class = function (_React$Component) {
         value: function componentDidMount() {
             // Set Value to Input Element on Accept
             this.setState({ value: this.props.value });
-            this.setState({ className: 'keyboard-wrapper' });
 
             this.props.options.accepted = function (event, keyboard, el) {
                 this.handleChange('', el.value);
