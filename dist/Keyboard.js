@@ -136,7 +136,7 @@ var _class = function (_React$Component) {
             }
             return _react2.default.createElement(
                 'div',
-                { 'class': 'keyboard-wrapper', className: this.state.className },
+                { className: this.state.className },
                 ' ',
                 element,
                 ' '
