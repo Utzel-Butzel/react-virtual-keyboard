@@ -79,7 +79,8 @@ var _class = function (_React$Component) {
             }
 
             //Add jQuery Keyboard to DOM Element
-            (0, _jquery2.default)(_reactDom2.default.findDOMNode(this.refs.keyboard)).keyboard(this.props.options);
+            // (0, _jquery2.default)(_reactDom2.default.findDOMNode(this.refs.keyboard)).keyboard(this.props.options);
+            this.addKeyBoardToDOM();
 
             // Update while typing if usePreview is false
             if (this.props.options.usePreview === false) {
@@ -89,6 +90,11 @@ var _class = function (_React$Component) {
             }
         }
     }, {
+        key: 'addKeyBoardToDOM',
+        value: function addKeyBoardToDOM() {
+            (0, _jquery2.default)(_reactDom2.default.findDOMNode(this.refs.keyboard)).keyboard(this.props.options);
+        }
+    },{
         key: 'clear',
         value: function clear() {
             this.setState({ value: '' });
