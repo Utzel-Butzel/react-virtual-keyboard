@@ -1,6 +1,6 @@
 {
   "name": "react-virtual-keyboard",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Use jQuery Virtual Keyboard in react.js",
   "main": "dist/Keyboard.js",
   "scripts": {
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gaearon/react-hot-boilerplate.git"
+    "url": "https://github.com/Utzel-Butzel/react-virtual-keyboard.git"
   },
   "keywords": [
     "react",
@@ -28,9 +28,9 @@
   "author": "Robert Gühne <robert@polyxo.de> (http://github.com/Utzel-Butzel)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gaearon/react-hot-boilerplate/issues"
+    "url": "https://github.com/Utzel-Butzel/react-virtual-keyboard/issues"
   },
-  "homepage": "https://github.com/gaearon/react-hot-boilerplate",
+  "homepage": "https://github.com/Utzel-Butzel/react-virtual-keyboard",
   "devDependencies": {
     "babel-compile": "^2.0.0",
     "babel-core": "^6.0.20",
