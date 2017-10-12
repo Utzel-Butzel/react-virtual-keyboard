@@ -34,20 +34,20 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var _class = function (_React$Component) {
-    _inherits(_class, _React$Component);
+var VirtualKeyboard = function (_React$Component) {
+    _inherits(VirtualKeyboard, _React$Component);
 
-    function _class(props) {
-        _classCallCheck(this, _class);
+    function VirtualKeyboard(props) {
+        _classCallCheck(this, VirtualKeyboard);
 
-        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(_class).call(this, props));
+        var _this = _possibleConstructorReturn(this, (VirtualKeyboard.__proto__ || Object.getPrototypeOf(VirtualKeyboard)).call(this, props));
 
         _this.state = { value: "", className: 'keyboard-wrapper' };
         _this.handleChange = _this.handleChange.bind(_this);
         return _this;
     }
 
-    _createClass(_class, [{
+    _createClass(VirtualKeyboard, [{
         key: 'componentDidMount',
         value: function componentDidMount() {
             // Set Value to Input Element on Accept
@@ -58,7 +58,9 @@ var _class = function (_React$Component) {
                 if (typeof this.props.onAccepted == 'function') {
                     this.props.onAccepted(el.value);
                 }
-                console.log('The content "' + el.value + '" was accepted');
+                if (this.props.debug) {
+                    console.log('The content "' + el.value + '" was accepted');
+                }
             }.bind(this);
 
             // Set Class to visible
@@ -74,7 +76,9 @@ var _class = function (_React$Component) {
             if (this.props.options.updateOnChange == true) {
                 this.props.options.change = function (event, keyboard, el) {
                     this.handleChange('', keyboard.preview.value);
-                    console.log('The content "' + el.value + '" was changed');
+                    if (this.props.debug) {
+                        console.log('The content "' + el.value + '" was changed');
+                    }
                 }.bind(this);
             }
 
@@ -120,7 +124,9 @@ var _class = function (_React$Component) {
         key: 'handleChange',
         value: function handleChange(event, input) {
             if (!input && event && event.target && typeof event.target.value != 'undefined') input = event.target.value;
-            console.log("Change", input);
+            if (this.props.debug) {
+                console.log("Change", input);
+            }
             this.setState({ value: input });
             this.props.onChange(input);
         }
@@ -132,13 +138,12 @@ var _class = function (_React$Component) {
     }, {
         key: 'render',
         value: function render() {
-            var _props = this.props;
-            var options = _props.options;
-            var value = _props.value;
-            var validation = _props.validation;
-            var onChange = _props.onChange;
-
-            var other = _objectWithoutProperties(_props, ['options', 'value', 'validation', 'onChange']);
+            var _props = this.props,
+                options = _props.options,
+                value = _props.value,
+                validation = _props.validation,
+                onChange = _props.onChange,
+                other = _objectWithoutProperties(_props, ['options', 'value', 'validation', 'onChange']);
 
             if (this.props.options.type == 'textarea') {
                 var element = _react2.default.createElement('textarea', _extends({ ref: 'keyboard', value: this.state.value, onChange: this.handleChange }, other));
@@ -155,7 +160,7 @@ var _class = function (_React$Component) {
         }
     }]);
 
-    return _class;
+    return VirtualKeyboard;
 }(_react2.default.Component);
 
-exports.default = _class;
+exports.default = VirtualKeyboard;
