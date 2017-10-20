@@ -8,6 +8,11 @@ https://mottie.github.io/Keyboard/
 
 ### Usage
 
+#### Installation
+```
+npm install react-virtual-keyboard
+```
+
 #### Import Keyboard
 ```javascript
 import Keyboard from 'react-virtual-keyboard';
@@ -35,10 +40,9 @@ import Keyboard from 'react-virtual-keyboard';
   }}
   onChange={this.onInputChanged}
   onAccepted={this.onInputSubmitted}
+  ref={k => this.keyboard = k}
 />
 ```
-You can use the following Options: https://github.com/Mottie/Keyboard/wiki/Options
-
 
 #### Return updated values
 ```javascript
@@ -50,6 +54,17 @@ onInputSubmitted = (data) => {
   console.log("Input submitted:", data);
 }
 ```
+
+#### Listen for button presses
+```javascript
+this.keyboard.interface.keyaction.enter = (base) => {
+  // Enter button pressed
+  // Accepting content, as an example:
+  return this.keyboard.interface.keyaction.accept(base);
+};
+```
+
+For more information, check out the API documentation: https://github.com/Mottie/Keyboard/wiki/Options
 
 ### Dependencies
 
