@@ -55,6 +55,7 @@
   },
   "dependencies": {
     "jquery": ">=1.4.3",
+    "prop-types": "^15.6.0",
     "virtual-keyboard": "^1.25.28"
   }
 }
