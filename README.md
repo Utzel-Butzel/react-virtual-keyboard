@@ -25,7 +25,7 @@ import Keyboard from 'react-virtual-keyboard';
   name='keyboard'
   options={{
     type:"input",
-    layout: "querty",
+    layout: "qwerty",
     alwaysOpen: true,
     usePreview: false,
     useWheel: false,
