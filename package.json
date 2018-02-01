@@ -50,8 +50,8 @@
     "webpack-dev-server": "^1.12.1"
   },
   "peerDependenies": {
-    "react": "^15.0.1",
-    "react-dom": "^15.0.1"
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
   },
   "dependencies": {
     "jquery": ">=1.4.3",
