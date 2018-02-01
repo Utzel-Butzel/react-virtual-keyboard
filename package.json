@@ -1,6 +1,6 @@
 {
   "name": "react-virtual-keyboard",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Use jQuery Virtual Keyboard in react.js",
   "main": "dist/Keyboard.js",
   "scripts": {
