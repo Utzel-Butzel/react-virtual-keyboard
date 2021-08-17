@@ -116,13 +116,16 @@ var VirtualKeyboard = function (_Component) {
   }, {
     key: 'addKeyBoardToDOM',
     value: function addKeyBoardToDOM() {
-      var keyboardSelector = (0, _jquery2.default)(this.keyboardRef);
-      keyboardSelector.keyboard(this.props.options);
+     try {
+          var keyboardSelector = (0, _jquery2.default)(this.keyboardRef);
 
-      /**
-       * Get instantiated keyboard
-       */
-      this.keyboard = keyboardSelector.getkeyboard();
+          if(keyboardSelector)
+             keyboardSelector.keyboard(this.props.options);
+         }
+      catch(error){
+         console.log(error)
+         return;
+      }
 
       /**
        * Get keyboard plugin interface
