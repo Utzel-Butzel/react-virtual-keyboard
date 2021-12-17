@@ -1,6 +1,10 @@
 React Virtual Keyboard
 =====================
 
+### Project is outdated!
+
+**Please use https://virtual-keyboard.js.org/react/ instead**
+
 A on-screen keyboard (OSK) Component that works in the browser for reactJS. Useful for Kiosk Touchscreens.
 
 Based on the Virtual Keyboard using jQuery:
